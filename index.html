@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Registro</title>
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario Registro</h1>
+        <form id="registro" action="procesar.php" method="post">
+            <div>
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" name="nombre" id="nombre" class="form-control" required>
+            </div>
+            <div>
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" id="email" required class="form-control">
+            </div>
+            <div>
+                <label for="edad" class="form-label">Edad</label>
+                <input type="number" name="edad" id="edad" min="18" max="100" class="form-control">
+            </div>
+            <div>
+                <label>Género:</label>
+                <input type="radio" name="genero" id="genero-masculino" class="form-check-input" value="masculino" required>
+                <label for="genero-masculino" class="form-label">Masculino</label>
+                <input type="radio" name="genero" id="genero-femenino" class="form-check-input" value="femenino" required>
+                <label for="genero-femenino" class="form-label">Femenino</label>
+                <input type="radio" name="genero" id="genero-otro" class="form-check-input" value="Otro" required checked>
+                <label for="genero-otro" class="form-label">Otro</label>
+            </div>
+            <div>
+                <label for="pais">País</label>
+                <select name="pais" id="pais" class="form-select">
+                    <option value="">Selecciona un país</option>
+                    <option value="españa">España</option>
+                    <option value="francia">Francia</option>
+                    <option value="dinamarca">Dinamarca</option>
+                </select>
+            </div>
+            <div>
+                <label for="comentario" class="form-label">Comentarios</label>
+                <textarea  name="comentario" id="comentario" class="form-control" cols="40" rows="30"></textarea>
+            </div>
+            <div>
+                <input type="checkbox" name="terminos" id="terminos" class="form-check-input"  required checked>
+                <label for="terminos" class="form-label">Aceptar términos y condiciones</label>
+            </div>
+            <div class="d-grid gap-2">
+                <input type="submit" value="Enviar" class="btn btn-primary">
+            </div>
+        </form>
+        <div class="alert alert-info" id="confirmacion">
+            <!-- aqui irá los datos a confirmar generados por javascript -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
