@@ -29,7 +29,7 @@ function mostrarConfirmacion(event) {
 
 // Función para enviar el formulario
 function enviarFormulario() {
-    document.getElementById("formulario").submit();
+    document.getElementById("registro").submit();
 }
 
 // Función para volver al formulario
